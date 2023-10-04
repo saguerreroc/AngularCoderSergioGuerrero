@@ -1,0 +1,14 @@
+<div class="contenido">
+    <h2>Segunda Entrega</h2>
+    <p [ngClass]="{'color-rojo': cambiarColor}">Este párrafo cambia de color con ngClass.</p>
+    <button (click)="cambiarColor = !cambiarColor">Cambiar Color</button>
+    <p>{{ texto | uppercase }}</p>
+</div>
+<div class="lista-alumnos">
+  <ul>
+    <li *ngFor="let alumno of alumnos" [ngClass]="aplicarEstilo(alumno.promedio)">
+      {{ alumno.nombre }} - Promedio: {{ alumno.promedio }}
+    </li>
+  </ul>
+</div>
+  
