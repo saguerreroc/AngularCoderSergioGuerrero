@@ -1,0 +1,20 @@
+<form [formGroup]="formulario">
+    <div>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" formControlName="nombre">
+      <div class="error-text">
+        <p *ngIf="formulario.get('nombre')?.hasError('required')">El nombre es requerido.</p>
+        <p *ngIf="formulario.get('nombre')?.hasError('customError')">{{ formulario.get('nombre')?.getError('customError') }}</p>
+      </div>
+    </div>
+    <div class="margen-inferior">
+      <label for="email">Email</label>
+      <input type="text" id="email" formControlName="email">
+      <div class="error-text">
+        <p *ngIf="formulario.get('email')?.hasError('required')">El correo electronico es requerido.</p>
+        <p *ngIf="formulario.get('email')?.hasError('email')">El correo electronico no es valido.</p>
+      </div>
+    </div>
+    <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+</form>
+  
