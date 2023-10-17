@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>{{data.action}} Alumno</h2>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Primer Nombre" [(ngModel)]="alumno.primerNombre" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Segundo Nombre" [(ngModel)]="alumno.segundoNombre">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Primer Apellido" [(ngModel)]="alumno.primerApellido" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Segundo Apellido" [(ngModel)]="alumno.segundoApellido">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Identificación" [(ngModel)]="alumno.identificacion" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Correo Electrónico" [(ngModel)]="alumno.correoElectronico">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Código Estudiantil" [(ngModel)]="alumno.codigoEstudiantil" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Teléfono" [(ngModel)]="alumno.telefono">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button color="primary" (click)="onSaveClick()">Guardar</button>
+</div>
